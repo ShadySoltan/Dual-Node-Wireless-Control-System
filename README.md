@@ -42,6 +42,6 @@ PWM or GPIO Control: Depending on the motor driver, the slave node may use PWM s
 
 ---
 
-# Components used in project:\*\*
+# Components used in project:
 
 ![Alt text](COMPONENTS.png)
