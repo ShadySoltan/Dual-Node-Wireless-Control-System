@@ -4,7 +4,7 @@ This project involves the development of a dual-node wireless control system uti
 
 ![Alt text](PROJECT_DESIGN.png)
 
-**Master Node (Tiva C Microcontroller)**
+# Master Node (Tiva C Microcontroller)
 
 1. Bluetooth Communication Interface:
 
@@ -27,7 +27,7 @@ This project involves the development of a dual-node wireless control system uti
 
    ***
 
-**Slave Node (AVR ATmega32 Microcontroller)**
+# Slave Node (AVR ATmega32 Microcontroller)
 
 1. SPI Communication Interface:
 
