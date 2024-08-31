@@ -39,3 +39,9 @@ Indicator Logic: The AVR microcontroller may need to implement logic to handle d
 
 Motor Driver Interface: The DC motor is controlled by the slave node, which interfaces with a motor driver circuit. The microcontroller must send appropriate signals to the driver to start, stop, or adjust the motor's speed and direction.
 PWM or GPIO Control: Depending on the motor driver, the slave node may use PWM signals for speed control or simple GPIO toggling for on/off control.
+
+---
+
+# Components used in project:\*\*
+
+![Alt text](COMPONENTS.png)
