@@ -4,7 +4,7 @@ This project involves the development of a dual-node wireless control system uti
 
 ![Alt text](PROJECT_DESIGN.png)
 
-Master Node (Tiva C Microcontroller)
+**Master Node (Tiva C Microcontroller)**
 
 1. Bluetooth Communication Interface:
 
@@ -25,19 +25,21 @@ Master Node (Tiva C Microcontroller)
 
    Real-Time Processing: The master node manages the overall system coordination, ensuring that operations such as door control, LED activation, and motor operation are executed in real-time and in the correct sequence.
 
-Slave Node (AVR ATmega32 Microcontroller)
+   ***
 
-5. SPI Communication Interface:
+**Slave Node (AVR ATmega32 Microcontroller)**
+
+1. SPI Communication Interface:
 
    SPI Slave Configuration: The AVR ATmega32 microcontroller acts as the slave in the SPI communication setup. It must be configured to receive and respond to commands from the master node accurately.
    Command Interpretation: The slave node interprets SPI messages from the master node and executes corresponding actions such as controlling LEDs or operating the DC motor.
 
-6. LED Control:
+2. LED Control:
 
    GPIO Configuration: The slave node controls LEDs connected to its GPIO pins. It must be configured to turn these LEDs on or off based on the commands received via SPI.
    Indicator Logic: The AVR microcontroller may need to implement logic to handle different LED patterns or statuses, as dictated by the master node.
 
-7. DC Motor Control:
+3. DC Motor Control:
 
    Motor Driver Interface: The DC motor is controlled by the slave node, which interfaces with a motor driver circuit. The microcontroller must send appropriate signals to the driver to start, stop, or adjust the motor's speed and direction.
    PWM or GPIO Control: Depending on the motor driver, the slave node may use PWM signals for speed control or simple GPIO toggling for on/off control.
