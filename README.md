@@ -21,10 +21,6 @@ Angle Control Logic: The master node interprets received commands and adjusts th
 SPI Protocol: The master node uses the SPI protocol to communicate with the slave node (AVR ATmega32). This communication must be synchronized to ensure that commands are accurately relayed and executed by the slave node.
 Command Parsing: The Tiva C microcontroller must parse incoming commands and translate them into SPI messages that the slave node can interpret and act upon.
 
-**4. System Coordination:**
-
-Real-Time Processing: The master node manages the overall system coordination, ensuring that operations such as door control, LED activation, and motor operation are executed in real-time and in the correct sequence.
-
 ---
 
 # Slave Node (AVR ATmega32 Microcontroller)
