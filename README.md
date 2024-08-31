@@ -24,7 +24,8 @@ Master Node (Tiva C Microcontroller)
 4. System Coordination:
 
    Real-Time Processing: The master node manages the overall system coordination, ensuring that operations such as door control, LED activation, and motor operation are executed in real-time and in the correct sequence.
-   Slave Node (AVR ATmega32 Microcontroller)
+
+Slave Node (AVR ATmega32 Microcontroller)
 
 5. SPI Communication Interface:
 
