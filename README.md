@@ -84,8 +84,8 @@ The Tiva C microcontroller communicates with the Secondary Node using the SPI1 i
     SS (Slave Select): Connect SPI1_SS (Pin PD2) on Tiva C to the corresponding SPI SS pin on the AVR MCU.
 
 **2. Secondary Node (AVR ATmega32 MCU) Connections**
-2.1 LEDs
-The Secondary MCU controls three LEDs, which are connected to specific GPIO pins.
+
+2.1 LEDs The Secondary MCU controls three LEDs, which are connected to specific GPIO pins.
 
     LED 1:
     Anode Pin: Connect to Pin C7 on the AVR MCU.
