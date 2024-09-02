@@ -6,13 +6,35 @@
  */ 
 #include "MAIN_APP.h"
 
-
 void MCU_INIT(void)
 {
-	
+	DIO_Init(); //Initialize DIO Pins of Slave MCU
+	SPI_ConfigTypes SPI_options = {Slave,MSB,SPIClock_64,DoupleSpeedDisable}; //Slave SPI Config Options
+	SPI_Init(&SPI_options); //Initialize Slave SPI	
 }
 
 void MAIN_APP(void)
 {
-	
+		u8 Received_From_Master = STD_Low;
+		
+		Received_From_Master = SPI_TxRx(Ack);
+		
+		switch(Received_From_Master)
+		{
+			case Led1:
+
+			break;
+			
+			case Led2:
+			
+			break;
+			
+			case Led3:
+			
+			break;
+			
+			case Air_Cond:
+
+			break;
+		}	
 }

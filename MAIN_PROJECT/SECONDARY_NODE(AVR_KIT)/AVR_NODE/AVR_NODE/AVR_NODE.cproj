@@ -101,6 +101,7 @@
       <Value>../Library</Value>
       <Value>../DIO/includes</Value>
       <Value>../SPI/includes</Value>
+      <Value>../APP/Includes</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
@@ -123,6 +124,12 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="APP\Includes\MAIN_APP.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Src\MAIN_APP.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="DIO\includes\DIO.h">
       <SubType>compile</SubType>
     </Compile>
@@ -167,10 +174,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="APP\Includes" />
+    <Folder Include="APP\Src" />
     <Folder Include="DIO\" />
     <Folder Include="DIO\includes\" />
     <Folder Include="DIO\src\" />
     <Folder Include="Library\" />
+    <Folder Include="APP" />
     <Folder Include="SPI\" />
     <Folder Include="SPI\includes\" />
     <Folder Include="SPI\src\" />

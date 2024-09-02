@@ -1,4 +1,5 @@
-main.d main.o: .././main.c ../APP/Includes/MAIN_APP.h ../Library/Clock.h \
+APP/Src/MAIN_APP.d APP/Src/MAIN_APP.o: ../APP/Src/MAIN_APP.c \
+ ../APP/Includes/MAIN_APP.h ../Library/Clock.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdint.h \
