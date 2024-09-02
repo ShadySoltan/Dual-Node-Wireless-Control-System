@@ -130,11 +130,11 @@ The Tiva C microcontroller communicates with the Secondary Node using the SPI1 i
 **Step 3: Command Execution or Transfer**
 Once the Main Node has successfully received and interpreted the command, it takes one of two possible actions based on the content of the data:
 
-        1. Local Execution on Main Node:
-            If the command pertains to hardware components directly connected to the Main Node, such as controlling a servo motor for opening or closing a door, the Main Node immediately executes the command. For example, if the command instructs the servo motor to rotate to a specific angle, the Main Node will generate the appropriate PWM signal to achieve the desired motion.
+    1. Local Execution on Main Node:
+        If the command pertains to hardware components directly connected to the Main Node, such as controlling a servo motor for opening or closing a door, the Main Node immediately executes the command. For example, if the command instructs the servo motor to rotate to a specific angle, the Main Node will generate the appropriate PWM signal to achieve the desired motion.
 
-        2. Command Transfer to Secondary Node:
-            If the command is intended for the hardware components connected to the Secondary Node (e.g., LEDs or DC motor), the Main Node transfers the command via the SPI protocol. The Main Node acts as the master in the SPI communication, sending the command data to the Secondary Node, which acts as the slave. The Secondary Node, upon receiving the command, decodes it and executes the required action, such as turning on an LED or controlling the speed and direction of the DC motor.
+    2. Command Transfer to Secondary Node:
+        If the command is intended for the hardware components connected to the Secondary Node (e.g., LEDs or DC motor), the Main Node transfers the command via the SPI protocol. The Main Node acts as the master in the SPI communication, sending the command data to the Secondary Node, which acts as the slave. The Secondary Node, upon receiving the command, decodes it and executes the required action, such as turning on an LED or controlling the speed and direction of the DC motor.
 
 **Step 4: Error Handling and Command Validation**
 
