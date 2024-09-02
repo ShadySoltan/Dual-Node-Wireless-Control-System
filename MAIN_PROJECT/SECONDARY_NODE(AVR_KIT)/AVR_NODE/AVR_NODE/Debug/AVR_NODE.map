@@ -55,6 +55,27 @@ Discarded input sections
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
+ .text          0x00000000        0x0 SPI/src/SPI.o
+ .data          0x00000000        0x0 SPI/src/SPI.o
+ .bss           0x00000000        0x0 SPI/src/SPI.o
+ .text.SPI_Init
+                0x00000000       0xa4 SPI/src/SPI.o
+ .text.SPI_TxRx
+                0x00000000        0xa SPI/src/SPI.o
+ .text.SPI_SlaveEnable
+                0x00000000       0x16 SPI/src/SPI.o
+ .text.SPI_SlaveDisable
+                0x00000000       0x16 SPI/src/SPI.o
+ .debug_info    0x00000000      0x5ba SPI/src/SPI.o
+ .debug_abbrev  0x00000000      0x12b SPI/src/SPI.o
+ .debug_loc     0x00000000      0x120 SPI/src/SPI.o
+ .debug_aranges
+                0x00000000       0x38 SPI/src/SPI.o
+ .debug_ranges  0x00000000       0x28 SPI/src/SPI.o
+ .debug_line    0x00000000      0x18d SPI/src/SPI.o
+ .debug_str     0x00000000      0x5ba SPI/src/SPI.o
+ .comment       0x00000000       0x31 SPI/src/SPI.o
+ .debug_frame   0x00000000       0x70 SPI/src/SPI.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
@@ -106,6 +127,7 @@ LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/
 LOAD DIO/src/DIO.o
 LOAD DIO/src/DIO_CFG.o
 LOAD main.o
+LOAD SPI/src/SPI.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 END GROUP

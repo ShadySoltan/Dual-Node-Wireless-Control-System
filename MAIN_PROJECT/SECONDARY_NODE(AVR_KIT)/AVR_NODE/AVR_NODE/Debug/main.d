@@ -5,9 +5,10 @@ main.d main.o: .././main.c ../Library/Clock.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
- ../Library/STD_Types.h ../Library/BitMath.h ../DIO/includes/DIO.h \
- ../DIO/includes/DIO_Reg.h ../DIO/includes/DIO_Types.h \
- ../DIO/includes/DIO_CFG.h \
+ ../Library/STD_Types.h ../Library/BitMath.h ../SPI/includes/SPI.h \
+ ../SPI/includes/SPI_Reg.h ../SPI/includes/SPI_Types.h \
+ ../DIO/includes/DIO.h ../DIO/includes/DIO_Reg.h \
+ ../DIO/includes/DIO_Types.h ../DIO/includes/DIO_CFG.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include/avr/iom32.h \
@@ -34,6 +35,12 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../Library/STD_Types.h:
 
 ../Library/BitMath.h:
+
+../SPI/includes/SPI.h:
+
+../SPI/includes/SPI_Reg.h:
+
+../SPI/includes/SPI_Types.h:
 
 ../DIO/includes/DIO.h:
 

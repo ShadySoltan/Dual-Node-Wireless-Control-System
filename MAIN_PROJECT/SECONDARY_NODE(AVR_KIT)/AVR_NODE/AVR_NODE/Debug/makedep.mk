@@ -8,3 +8,5 @@ DIO\src\DIO_CFG.c
 
 main.c
 
+SPI\src\SPI.c
+

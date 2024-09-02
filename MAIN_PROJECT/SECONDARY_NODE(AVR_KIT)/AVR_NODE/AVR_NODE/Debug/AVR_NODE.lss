@@ -79,7 +79,7 @@ Disassembly of section .text:
 
 00000082 <main>:
 #include "BitMath.h"
-//#include "SPI.h"
+#include "SPI.h"
 #include "DIO.h"
 #include <avr/io.h>
 int main(void)

@@ -8,7 +8,7 @@
 #include "Clock.h"
 #include "STD_Types.h"
 #include "BitMath.h"
-//#include "SPI.h"
+#include "SPI.h"
 #include "DIO.h"
 #include <avr/io.h>
 int main(void)
