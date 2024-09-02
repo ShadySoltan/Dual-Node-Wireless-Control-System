@@ -108,7 +108,7 @@ The Tiva C microcontroller communicates with the Secondary Node using the SPI1 i
     IN2 Pin: Connect to Pin B1 on the AVR MCU.
     PWM Pin: Connect to the PWM pin on the AVR MCU.
 
-Power Supply:
-VCC and Ground: Connect the L298N motor driver shield to an external battery for power.
+    Power Supply:
+    VCC and Ground: Connect the L298N motor driver shield to an external battery for power.
 
 ---
