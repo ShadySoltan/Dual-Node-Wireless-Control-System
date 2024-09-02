@@ -138,6 +138,6 @@ Once the Main Node has successfully received and interpreted the command, it tak
 
 **Step 4: Error Handling and Command Validation**
 
-    Throughout the process, the Main Node incorporates robust error handling mechanisms. If the received command data is invalid, unrecognized, or does not match any predefined operation, the Main Node will ignore the command. The system is designed to disregard erroneous data to prevent unintended actions. After dismissing the invalid command, the Main Node resumes its waiting state, ready to receive and process the next valid command from the mobile phone.
+Throughout the process, the Main Node incorporates robust error handling mechanisms. If the received command data is invalid, unrecognized, or does not match any predefined operation, the Main Node will ignore the command. The system is designed to disregard erroneous data to prevent unintended actions. After dismissing the invalid command, the Main Node resumes its waiting state, ready to receive and process the next valid command from the mobile phone.
 
 ---
