@@ -9,7 +9,7 @@
 #include "STD_Types.h"
 #include "BitMath.h"
 //#include "SPI.h"
-//#include "DIO.h"
+#include "DIO.h"
 #include <avr/io.h>
 int main(void)
 {
