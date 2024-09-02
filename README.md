@@ -47,3 +47,68 @@ PWM or GPIO Control: Depending on the motor driver, the slave node may use PWM s
 ![Alt text](COMPONENTS.png)
 
 ---
+
+# How to Connect The Main Node (Tiva C MCU) and Secondary Node (AVR ATmega32 MCU) With Other Components:
+
+**1. Main Node (Tiva C MCU) Connections**
+
+1.1 HC-05 Bluetooth Module:
+The HC-05 Bluetooth module is connected to the Tiva C microcontroller to enable wireless communication with external devices, such as a smartphone.
+
+UART Communication:
+
+    TXD Pin: Connect to UART5_RX (Pin PE4).
+    RXD Pin: Connect to UART5_TX (Pin PE5).
+
+    Power and Ground:
+    VCC Pin: Connect to VBUS pin on the Tiva C board.
+    GND Pin: Connect to a GND pin on the Tiva C board.
+
+1.2 Servo Motor
+The servo motor is connected to the Tiva C microcontroller to control mechanical movement, such as opening or closing a door.
+
+    Power and Ground:
+    VCC Pin: Connect to VBUS pin on the Tiva C board.
+    GND Pin: Connect to a GND pin on the Tiva C board.
+
+    Control Signal:
+    Signal Pin: Connect to PF1 (PWM) on the Tiva C board.
+
+1.3 SPI Communication with Secondary Node (AVR ATmega32 MCU)
+The Tiva C microcontroller communicates with the Secondary Node using the SPI1 interface.
+
+    SPI Connections:
+    SCLK (Serial Clock): Connect SPI1_SCLK (Pin PD0) on Tiva C to the corresponding SPI clock pin on the AVR MCU.
+    MISO (Master In Slave Out): Connect SPI1_MISO (Pin PD3) on Tiva C to the corresponding SPI MISO pin on the AVR MCU.
+    MOSI (Master Out Slave In): Connect SPI1_MOSI (Pin PD1) on Tiva C to the corresponding SPI MOSI pin on the AVR MCU.
+    SS (Slave Select): Connect SPI1_SS (Pin PD2) on Tiva C to the corresponding SPI SS pin on the AVR MCU.
+
+**2. Secondary Node (AVR ATmega32 MCU) Connections**
+2.1 LEDs
+The Secondary MCU controls three LEDs, which are connected to specific GPIO pins.
+
+    LED 1:
+    Anode Pin: Connect to Pin C7 on the AVR MCU.
+    Cathode Pin: Connect to a GND pin via a current-limiting resistor.
+
+    LED 2:
+    Anode Pin: Connect to Pin C0 on the AVR MCU.
+    Cathode Pin: Connect to a GND pin via a current-limiting resistor.
+
+    LED 3:
+    Anode Pin: Connect to Pin D3 on the AVR MCU.
+    Cathode Pin: Connect to a GND pin via a current-limiting resistor.
+
+2.2 DC Motor (Controlled by L298N Motor Driver Shield)
+
+    The DC motor is controlled via the L298N motor driver shield, which interfaces with the AVR ATmega32 MCU.
+
+    Motor Driver Connections:
+    IN1 Pin: Connect to Pin B0 on the AVR MCU.
+    IN2 Pin: Connect to Pin B1 on the AVR MCU.
+    PWM Pin: Connect to the PWM pin on the AVR MCU.
+
+Power Supply:
+VCC and Ground: Connect the L298N motor driver shield to an external battery for power.
+
+---
