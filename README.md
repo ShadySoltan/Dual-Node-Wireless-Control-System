@@ -112,3 +112,32 @@ The Tiva C microcontroller communicates with the Secondary Node using the SPI1 i
     VCC and Ground: Connect the L298N motor driver shield to an external battery for power.
 
 ---
+
+# Application Flow Description
+
+**The dual-node wireless control system project is designed to allow a mobile phone to control various hardware components via a wireless Bluetooth connection, utilizing the HC-05 Bluetooth module paired with the Main Node, which is a Tiva C microcontroller. The system enables seamless communication between the mobile phone, the Main Node, and a Secondary Node, which is an AVR ATmega32 microcontroller, to execute specific tasks.**
+
+---
+
+**Step 1: Bluetooth Pairing and Data Transmission**
+
+    Initially, the mobile phone pairs with the HC-05 Bluetooth module connected to the Main Node. This pairing process can be easily accomplished using a standard serial terminal application available on the Google Play Store. Once the pairing is successful, the user can send commands directly from the mobile phone to the Main Node via the serial terminal app. The communication between the mobile phone and the HC-05 module occurs over the UART protocol, ensuring reliable data transmission.
+
+**Step 2: Data Reception and Processing by the Main Node**
+
+    Upon receiving data from the HC-05 module, the Main Node processes the incoming commands. The data is transmitted over the UART interface, where the Main Node constantly monitors the UART channel for any incoming communication. When a command is detected, the Main Node retrieves the data and begins the process of interpreting its meaning and determining the appropriate course of action.
+
+**Step 3: Command Execution or Transfer**
+Once the Main Node has successfully received and interpreted the command, it takes one of two possible actions based on the content of the data:
+
+        1. Local Execution on Main Node:
+            If the command pertains to hardware components directly connected to the Main Node, such as controlling a servo motor for opening or closing a door, the Main Node immediately executes the command. For example, if the command instructs the servo motor to rotate to a specific angle, the Main Node will generate the appropriate PWM signal to achieve the desired motion.
+
+        2. Command Transfer to Secondary Node:
+            If the command is intended for the hardware components connected to the Secondary Node (e.g., LEDs or DC motor), the Main Node transfers the command via the SPI protocol. The Main Node acts as the master in the SPI communication, sending the command data to the Secondary Node, which acts as the slave. The Secondary Node, upon receiving the command, decodes it and executes the required action, such as turning on an LED or controlling the speed and direction of the DC motor.
+
+**Step 4: Error Handling and Command Validation**
+
+    Throughout the process, the Main Node incorporates robust error handling mechanisms. If the received command data is invalid, unrecognized, or does not match any predefined operation, the Main Node will ignore the command. The system is designed to disregard erroneous data to prevent unintended actions. After dismissing the invalid command, the Main Node resumes its waiting state, ready to receive and process the next valid command from the mobile phone.
+
+---
