@@ -21,20 +21,26 @@ void MAIN_APP(void)
 		
 		switch(Received_From_Master)
 		{
-			case Led1:
+			case Led0:
 
+			break;
+			
+			case Led1:
+			
 			break;
 			
 			case Led2:
 			
 			break;
 			
-			case Led3:
-			
-			break;
-			
 			case Air_Cond:
 
+			break;
+			
+			default:
+			//Invalid choice
+			//The code will never reach this part since the master node can not send insufficient data from the first place
+			return;
 			break;
 		}	
 }

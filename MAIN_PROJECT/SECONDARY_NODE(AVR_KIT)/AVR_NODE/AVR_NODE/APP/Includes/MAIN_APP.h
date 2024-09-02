@@ -16,10 +16,10 @@
 #include "DIO.h"
 #include <avr/io.h>
 
-#define Led1		1
-#define Led2		2
-#define Led3		3
-#define Air_Cond	4
+#define Led0		3		
+#define Led1		4
+#define Led2		5
+#define Air_Cond	6
 #define Ack			0x01
 
 void MCU_INIT(void);
