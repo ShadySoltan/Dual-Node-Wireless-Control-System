@@ -16,19 +16,22 @@ void  MCU_INIT(void)
 uint8 WaitForCommand(void)
 {
     uint8 cmd = UART5_ReceiveByte();
-    return cmd;
+    return cmd - '0';
 }
 
 void  ExecuteCommand(uint8 cmd)
 {
+    delay(5000);
     switch(cmd)
     {
     case OPEN_DOOR:
         Servo_Angle(180);
+        UART5_SendString("Door Opened!");
         break;
 
     case CLOSE_DOOR:
         Servo_Angle(0);
+        UART5_SendString("Door Closed!");
         break;
 
     case TOGGLE_LED0:

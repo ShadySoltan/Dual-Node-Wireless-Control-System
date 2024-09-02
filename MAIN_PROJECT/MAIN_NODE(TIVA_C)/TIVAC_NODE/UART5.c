@@ -33,12 +33,14 @@ void HC05_Init(void)
 
 void UART5_SendByte(uint8 data)
 {
+    UART5FlushTransmitter();
     while(!(UART5_FR_R & UART5_FR_TXFE_MASK));
     UART5_DR_R = data;
 }
 
 uint8 UART5_ReceiveByte(void)
 {
+    UART5FlushReceiver();
     while(UART5_FR_R & UART5_FR_RXFE_MASK);
     return UART5_DR_R;
 }
