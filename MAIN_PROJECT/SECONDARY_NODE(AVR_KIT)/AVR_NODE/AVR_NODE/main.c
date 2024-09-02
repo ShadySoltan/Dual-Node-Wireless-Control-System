@@ -5,12 +5,9 @@
  * Author : Administrator
  */ 
 
-#include "Clock.h"
-#include "STD_Types.h"
-#include "BitMath.h"
-#include "SPI.h"
-#include "DIO.h"
-#include <avr/io.h>
+#include "MAIN_APP.h"
+
+
 int main(void)
 {
     while (1) 
