@@ -22,19 +22,21 @@ void MAIN_APP(void)
 		switch(Received_From_Master)
 		{
 			case Led0:
-
+			DIO_ToggleChannel(DIO_ChannelD3);
 			break;
 			
 			case Led1:
-			
+			DIO_ToggleChannel(DIO_ChannelC2);
 			break;
 			
 			case Led2:
-			
+			DIO_ToggleChannel(DIO_ChannelC7);
 			break;
 			
 			case Air_Cond:
-
+			DIO_ToggleChannel(DIO_ChannelA0);
+			DIO_ToggleChannel(DIO_ChannelA1);
+			DIO_ToggleChannel(DIO_ChannelA2);
 			break;
 			
 			default:

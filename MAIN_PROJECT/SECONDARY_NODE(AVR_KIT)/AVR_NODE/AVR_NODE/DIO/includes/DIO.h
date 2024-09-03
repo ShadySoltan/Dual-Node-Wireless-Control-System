@@ -22,4 +22,5 @@ void DIO_ConfigChannel(DIO_ChannelTypes channelId,DIO_DataDir direction);
 u8 DIO_ReadPort(DIO_PortTypes portId);
 void DIO_WritePort(DIO_PortTypes portId,u8 portValue);
 void DIO_WriteChannelGroup(DIO_PortTypes portId,u8 portValue,u8 mask);
+
 #endif /* DIO_H_ */
