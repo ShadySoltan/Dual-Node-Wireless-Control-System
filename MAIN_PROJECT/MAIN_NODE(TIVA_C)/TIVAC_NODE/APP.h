@@ -25,7 +25,5 @@
 void  MCU_INIT(void);
 uint8 WaitForCommand(void);
 void  ExecuteCommand(uint8 cmd);
-void  TransferCommand(uint8 cmd);
-void  RUN_APP(void);
 
 #endif /* APP_H_ */
