@@ -14,16 +14,9 @@
 #include "SPI.h"
 #include "PWM.h"
 
-//Commands
-#define OPEN_DOOR          1
-#define CLOSE_DOOR         2
-#define TOGGLE_LED0        3
-#define TOGGLE_LED1        4
-#define TOGGLE_LED2        5
-#define TOGGLE_AC          6
-
 void  MCU_INIT(void);
 uint8 WaitForCommand(void);
 void  ExecuteCommand(uint8 cmd);
+void  Run_App(void);
 
 #endif /* APP_H_ */

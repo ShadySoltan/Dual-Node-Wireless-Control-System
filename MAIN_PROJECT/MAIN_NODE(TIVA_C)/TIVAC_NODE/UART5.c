@@ -31,13 +31,22 @@ void HC05_Init(void)
 
 void UART5_SendByte(uint8 data)
 {
-    while(!(UART5_FR_R & UART5_FR_TXFE_MASK));
+    // Ensure the transmit FIFO is empty before sending
+    while(!(UART5_FR_R & UART5_FR_TXFE_MASK));  // Wait until transmit FIFO is empty
+
+    // Transmit the byte
     UART5_DR_R = data;
+
+    // Optional: Wait until transmission is complete (to flush TX FIFO)
+    while(UART5_FR_R & 0x08);  // Wait until UART5 is no longer busy
 }
 
 uint8 UART5_ReceiveByte(void)
 {
-    while(UART5_FR_R & UART5_FR_RXFE_MASK);
+    // Optional: Clear the receive FIFO by reading any residual data
+    while(UART5_FR_R & UART5_FR_RXFE_MASK);  // Wait for receive FIFO to have data
+
+    // Receive and return the byte
     return UART5_DR_R;
 }
 

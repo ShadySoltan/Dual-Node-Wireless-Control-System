@@ -5,6 +5,6 @@ int main(void)
     MCU_INIT();
 	while(1)
 	{
-	    RUN_APP();
+	    Run_App();
 	}
 }
