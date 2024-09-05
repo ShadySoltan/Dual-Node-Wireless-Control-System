@@ -10,7 +10,8 @@ void MCU_INIT(void)
 {
 	DIO_Init(); //Initialize DIO Pins of Slave MCU
 	SPI_ConfigTypes SPI_options = {Slave,MSB,SPIClock_64,DoupleSpeedDisable}; //Slave SPI Config Options
-	SPI_Init(&SPI_options); //Initialize Slave SPI	
+	SPI_Init(&SPI_options); //Initialize Slave SPI
+	DIO_WriteChannel(DIO_ChannelA1,STD_High);	
 }
 
 void MAIN_APP(void)
