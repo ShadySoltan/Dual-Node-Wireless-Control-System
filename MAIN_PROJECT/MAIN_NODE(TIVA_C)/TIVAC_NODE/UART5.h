@@ -25,7 +25,6 @@ UART5 Masks
 #define UART5_FR_RXFE_MASK        0x00000010
 
 void HC05_Init(void);
-void Leds_Init(void);
 void UART5_SendByte(uint8 data);
 uint8 UART5_ReceiveByte(void);
 void UART5_ReceiveString(uint8 *pData);
